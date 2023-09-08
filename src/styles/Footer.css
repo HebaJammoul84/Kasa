@@ -1,0 +1,39 @@
+/****************** Footer ******************/
+
+.container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    margin-top: 30%;
+}
+
+.logo {
+    margin-top: 3%;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
+}
+
+.text {
+    color: white;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   
+    .logo {
+        margin-top: 15%;
+    }
+    .text {
+        font-size: small;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        text-align: center;
+        Width: 133px;
+        Height: 46px;
+    }
+
+}
