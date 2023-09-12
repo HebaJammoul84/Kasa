@@ -1,4 +1,4 @@
-.container {
+.error-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.text {
+.error-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,23 +17,23 @@
 
 .error,
 .errorMessage,
-.ToHome {
+.to-home {
     color: #ff6060;
 }
 
 .error {
-    font-size: 250px;
+    font-size: 220px;
     font-weight: 700;
     margin-bottom: 80px;
 }
 
 .errorMessage {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 200px;
 }
 
-.ToHome {
-    font-size: 30px;
+.to-home {
+    font-size: 100px;
     position: absolute;
-    bottom: 0;
+    
 }

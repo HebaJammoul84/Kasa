@@ -1,15 +1,18 @@
 import React from 'react';
+import useData from '../datas/useData';
+import Cards from '../components/Cards';
 import Banner from '../components/Banner';
-//import Cards from '../components/Cards';
-import img1 from '../assets/img1.png';
+import main from '../assets/main.png';
 
 const Home = () => {
+  const data = useData();
   return (
-    <Banner
-      bannerImg={img1}
-      title="Chez vous, partout et ailleurs"
-    />
+    <>
+      <Banner bannerImg={main} title="Chez vous, partout et ailleurs" />
 
+      <Cards data={data} />
+
+    </>
   );
 };
 

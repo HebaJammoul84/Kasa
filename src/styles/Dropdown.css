@@ -1,0 +1,49 @@
+.drop-container {
+    margin-top: 1rem;
+}
+
+.drop-header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff;
+    padding: 6px 20px 6px 15px;
+    cursor: pointer;
+}
+
+.drop-header span {
+    font-size: 20px;
+}
+
+.drop-box {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    color: #ff6060;
+    font-weight: 400;
+    padding: 15px 18px;
+    border-radius: 0 0 5px 5px;
+}
+
+.paragraphe {
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.drop-arrow {
+    transform: rotate(0deg);
+}
+
+.drop-arrow-open {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+}
+

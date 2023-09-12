@@ -1,6 +1,5 @@
-.container {
+header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 68px;
@@ -8,24 +7,21 @@
 }
 
 .navbarre {
-  color: #ff6060;
   display: flex;
-  justify-content: space-between;
-  list-style: none;
-  width: 90%;
-  margin-right: 50px;
+  width: 100%;
 }
 
-.logo {
-  margin-left: 40px;
-  width: 130px;
-  height: 40px;
+.navbarre li {
+  margin-left: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-
-  .logo {
-    margin-bottom: 5%;
-  }
-
+.navbarre li a {
+  font-size: 20px;
 }
+
+.header-logo {
+  width: 140px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {}

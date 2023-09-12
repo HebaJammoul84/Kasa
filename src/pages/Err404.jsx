@@ -1,20 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import style from '../styles/Error.css';
+import '../styles/Error.css';
 
 
 const Err404 = () => {
     return (
-        <div className={style.container}>
+        <div class="error-container">
 
-            <div className={style.text}>
-                <span className={style.error}>404</span>
-                <span className={style.errorMessage}>
+            <div class="error-text">
+                <span class="error">404</span>
+                <span class="errorMessage">
                     Oups! La page que vous demandez n'existe pas.
                 </span>
             </div>
             
-            <NavLink to="Home" className={style.ToHome}>
+            <NavLink to="/Home" class="to-home">
                 Retourner sur la page d'accueil
             </NavLink>
 

@@ -6,13 +6,50 @@
   font-weight: 500;
 }
 
-body {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  object-fit: cover;
+}
+
+main {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.app {
+  margin: 0 2rem;
 }
 
 a {
   text-decoration: none;
   color: #ff6060;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 a.active {
@@ -21,4 +58,9 @@ a.active {
 
 a:hover {
   text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
