@@ -2,3 +2,21 @@
     display: flex;
     justify-content: space-between;
 }
+
+.drop-down {
+    width: 47%;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .dropdown-container {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .drop-down {
+        width: 100%;
+    }
+}

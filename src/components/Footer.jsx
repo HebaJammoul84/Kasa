@@ -5,9 +5,12 @@ import '../styles/Footer.css';
 const Footer = () => {
     return (
         <footer>
-            <div class="footer-container">
-                <Logo class="footer-logo" />
-                <p class="footer-text" >© 2020 Kasa. All rights reserved</p>
+            <div className="footer-container">
+                <Logo className="footer-logo" />
+                <div className="footer-text">
+                <p>© 2020 Kasa. All </p>
+                <p>rights reserved</p>
+                </div>
             </div>
         </footer>
     );

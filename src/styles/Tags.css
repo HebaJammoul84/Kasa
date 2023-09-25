@@ -1,0 +1,25 @@
+.tag-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tag-container span {
+    display: block;
+    width: auto;
+    background-color: #ff6060;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 2px 26px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .tag-container span {
+        border-radius: 5px;
+        padding: 2px 18px;
+    }
+}

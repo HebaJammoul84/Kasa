@@ -1,0 +1,29 @@
+.star {
+    color: #ff6060;
+    fill: #ff6060;
+    font-size: var(--fs-star);
+}
+
+.empty-star {
+    fill: #e3e3e3;
+}
+
+
+@media (max-width: 768px) {
+    .rate-container {
+        margin-left: 11px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .star {
+        display: flex;
+        align-items: center;
+    }
+
+    .star,
+    .empty-star {
+        width: 18px;
+    }
+}

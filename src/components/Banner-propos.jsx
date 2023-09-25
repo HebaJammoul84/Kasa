@@ -4,10 +4,10 @@ import propos from '../assets/propos.png';
 
 const Banner = ({ title }) => {
     return (
-        <div class="banner-container">
+        <div className="banner-container">
 
-            <div class="banner-img">
-                <img class="banner-image" src={propos} alt={title} />
+            <div className="banner-img">
+                <img className="banner-image" src={propos} alt={title} />
             </div>
 
         </div>

@@ -29,7 +29,33 @@
     transform: translate(-50%, -50%);
     display: block;
     color: #fff;
-    font-size: 50px;
+    font-size: 36px;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .banner-container {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .banner-img {
+        height: 130px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .banner-image {
+        height: 130px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .banner-title {
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 500;
+        width: 90%;
+    }
+}

@@ -9,20 +9,18 @@ const Cards = ({ data }) => {
     // Utilise la méthode "map" pour créer une liste de cartes à partir des données
 
     const { cover, title, id } = location;
-    // Destructuring pour extraire les propriétés "cover", "title" et "id" de chaque emplacement
-
-
+    
     return ( 
-      <NavLink to={`Logement/${id}`} key={id}>
-        <div class="card">
-          <img class="card-image" src={cover} alt={title} />
-          <h2 class="card-title">{title}</h2>
+      <NavLink to={`/Logement/${id}`} key={id}>
+        <div className="card">
+          <img className="card-image" src={cover} alt={title} />
+          <h2 className="card-title">{title}</h2>
         </div>
       </NavLink>
     );
   });
 
-  return <div class="card-container">{cardsList}</div>;
+  return <div className="card-container">{cardsList}</div>;
 };
 
 export default Cards;

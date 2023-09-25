@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../styles/Dropdown.css';
 import arrow from "../assets/arrow.svg";
 
-const Dropdown = ({ title, paragraphe }) => {
+const Dropdown = ({ title, paragraphe, wrapClassName}) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleOnClick = () => {
         setIsOpen(!isOpen);
@@ -17,21 +17,21 @@ const Dropdown = ({ title, paragraphe }) => {
     }
 
     return (
-        <div class="drop-container" >
+        <div className={`drop-container ${wrapClassName}`} >
 
-            <div class="drop-header">
+            <div className="drop-header">
                 <span>{title}</span>
 
                 <div onClick={handleOnClick}>
                     <img src={arrow} alt="arrow"
-                        class={"drop-arrow" + (isOpen ? " drop-arrow-open" : "")}
+                        className={"drop-arrow" + (isOpen ? " drop-arrow-open" : "")}
                     />
                 </div>
 
             </div>
 
-            <div class="drop-box" style={{ display }}>
-                <span class="paragraphe">{paragraphe}</span>
+            <div className="drop-box" style={{ display }}>
+                <span className="paragraphe">{paragraphe}</span>
             </div>
 
         </div>

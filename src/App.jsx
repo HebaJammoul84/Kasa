@@ -11,13 +11,13 @@ function App() {
   return (
     <>
       <main>
-        <div class="App">
+        <div className="App">
           <BrowserRouter>
             <Header />
             <Routes>
               <Route path="" element={<Navigate to="/Home" />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/logement/:locationid" element={<Logement />} />
+              <Route path="/logement/:locationID" element={<Logement />} />
               <Route path="/Propos" element={<Propos />} />
               <Route path="*" element={<Err404 />} />
             </Routes>

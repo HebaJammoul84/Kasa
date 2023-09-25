@@ -8,11 +8,11 @@ const Header = () => {
     <header>
       <div>
         <NavLink to="home">
-          <Logo fill="#FF6060" class="header-logo" />
+          <Logo fill="#FF6060" className="header-logo" />
         </NavLink>
       </div>
       <nav>
-        <ul class="navbarre">
+        <ul className="navbarre">
           <li>
             <NavLink to="home">Accueil</NavLink>
           </li>

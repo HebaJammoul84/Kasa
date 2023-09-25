@@ -1,81 +1,56 @@
 import Dropdown from '../components/Dropdown';
 import Carousel from '../components/Carousel';
-import '../styles/Logement.css';
-import { useParams, useNavigate } from 'react-router-dom';
+import Info from '../components/Info';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import useDataId from '../datas/useDataId';
+import data from '../assets/Backend-data.json';
+import '../styles/Logement.css';
 
 
 const Logement = () => {
 
-    // Utilisation du hook useParams pour obtenir l'ID de l'emplacement depuis l'URL
     const { locationId } = useParams();
+    const [logement, setLogement] = useState();
+    const [Loading, setLoading] = useState(true);
 
-    // Utilisation du hook useNavigate pour gérer la navigation
-    const navigate = useNavigate();
-
-    // Déclaration de l'état local "locations" avec des valeurs initiales vides
-    const [locations, setLocations] = useState({
-        title: '',
-        location: '',
-        host: { name: '', picture: '' },
-        rating: '',
-        tags: [],
-        description: '',
-        equipments: [],
-        pictures: [],
-    });
-
-    // Extraction des valeurs de "locations" pour un accès plus facile
-    const {
-        title,
-        location,
-        host,
-        rating,
-        tags,
-        description,
-        equipments,
-        pictures,
-    } = locations;
-
-    // Appel au hook personnalisé useDataId pour obtenir 
-    //les données de l'emplacement correspondant
-    const matchedLocation = useDataId(locationId);
-
-
-    // Utilisation du hook useEffect pour gérer les effets 
-    //secondaires lors du chargement du composant
     useEffect(() => {
-        if (!matchedLocation) { // Vérifier si non défini ou vide
-            navigate('/Err404');
-        } else {
+        console.log(data)
+        console.log(locationId)
+        console.log(data.find(log => log.ID === locationId))
+        setLogement(data.find(log => log.ID === locationId))
+        setLoading(false)
+    }
 
-            // Mettre à jour l'état local "locations" avec les données de matchedLocation
-            setLocations(matchedLocation);
-        }
-        // Déclenchement de l'effet lorsque matchedLocation ou navigate changent
-    }, [matchedLocation, navigate]);
+    );
 
-    // Création d'une liste d'équipements à partir du tableau "equipments"
-    const equitments = equipments.map((equip) => <li key={equip}>{equip}</li>);
-
+    if (Loading) {
+        return <div> Loading...... </div>
+    }
 
     return (
         <div>
-            {/* Affichage du composant Carousel avec les images et la description */}
-            <Carousel imageArray={pictures} description={description} />
+           <Carousel imageArray={logement.pictures} description={logement.description} />
+           
+            <Info
+                title={logement.title}
+                location={logement.location}
+                name={logement.host.name}
+                picture={logement.host.picture}
+                tagList={logement.tags}
+                rating={logement.rating}
+            />
 
-            <div class="dropdown-container">
+            <div className="dropdown-container">
                 <Dropdown
                     title="Description"
-                    paragraphe={description}
+                    paragraphe={logement.description}
+                    wrapClassName="drop-down"
                 />
-
                 <Dropdown
                     title="Equipments"
-                    paragraphe={equipments}
+                    paragraphe={logement.equipments}
+                    wrapClassName="drop-down"
                 />
-
             </div>
         </div>
     );

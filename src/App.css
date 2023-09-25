@@ -64,3 +64,25 @@ img {
   max-width: 100%;
   display: block;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  } }
+
+@media (max-width: 768px) {
+  * {
+    font-weight: 400;
+  }
+  .app {
+    margin: 0 1rem;
+  }
+}

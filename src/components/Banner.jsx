@@ -4,13 +4,13 @@ import main from '../assets/main.png';
 
 const Banner = ({ title }) => {
     return (
-        <div class="banner-container">
+        <div className="banner-container">
 
-            <div class="banner-img">
-                <img class="banner-image" src={main} alt={title} />
+            <div className="banner-img">
+                <img className="banner-image" src={main} alt={title} />
             </div>
 
-            <h1 class="banner-title">{title}</h1>
+            <h1 className="banner-title">{title}</h1>
 
         </div>
 

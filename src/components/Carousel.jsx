@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as LeftArrow } from '../assets/arrowLeft.svg';
 import { ReactComponent as RightArrow } from '../assets/arrowRight.svg';
+import '../styles/Carousel.css';
 
 const Carousel = ({ imageArray, desc }) => {
     // Utilisation de useState pour gérer l'index de l'image actuelle
@@ -28,19 +29,19 @@ const Carousel = ({ imageArray, desc }) => {
         setCurrentIndex((prevIndex) => getPrevIndex(prevIndex, imageArray.length));
 
     return (
-        <div>
+        <div className="carousel-container">
              {/* Affichage de l'image actuelle */}
             <img src={imageArray[currentIndex]} alt={desc} />
 
             {/* Afficher les flèches et les numéros de diapositives si nécessaire */}
             {displayArrow && ( 
                 <>
-                    <div>
-                        <LeftArrow onClick={previous} />
-                        <RightArrow onClick={next} />
+                    <div className="arrow-container">
+                        <LeftArrow onClick={previous} className="arrow" />
+                        <RightArrow onClick={next} className="arrow"/>
                     </div>
 
-                    <div>
+                    <div className="index-container">
                         {/* Afficher le numéro de diapositive actuel parmi le total */}
                         <span>{`${currentIndex + 1}/${imageArray.length}`}</span>
                     </div>

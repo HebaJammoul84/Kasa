@@ -1,5 +1,6 @@
 .drop-container {
     margin-top: 1rem;
+    box-sizing: border-box;
 }
 
 .drop-header {

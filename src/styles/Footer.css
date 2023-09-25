@@ -18,6 +18,22 @@
 
 .footer-text {
     color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 768px) {}
+.footer-text p {
+    margin-right: 4px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

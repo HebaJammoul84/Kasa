@@ -5,16 +5,16 @@ import '../styles/Error.css';
 
 const Err404 = () => {
     return (
-        <div class="error-container">
+        <div className="error-container">
 
-            <div class="error-text">
-                <span class="error">404</span>
-                <span class="errorMessage">
+            <div className="error-text">
+                <span className="error">404</span>
+                <span className="errorMessage">
                     Oups! La page que vous demandez n'existe pas.
                 </span>
             </div>
             
-            <NavLink to="/Home" class="to-home">
+            <NavLink to="/Home" className="to-home">
                 Retourner sur la page d'accueil
             </NavLink>
 

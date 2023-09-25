@@ -24,12 +24,19 @@
     box-shadow: 1px 5px 25px -17px #000;
     -webkit-box-shadow: 1px 5px 25px -17px #000;
     -moz-box-shadow: 1px 5px 25px -17px #000;
+
+    
 }
 
 .card-image {
     display: block;
     border-radius: 10px;
     aspect-ratio: 1/1;
+    filter: brightness(0.6);
+}
+
+.card img {
+    display: block;
 }
 
 .card-title {
@@ -37,9 +44,30 @@
     position: absolute;
     display: block;
     color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 550;
     left: 1rem;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: 100%;
+        margin-top: 0px;
+        background: none;
+        border-radius: 25px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .card-title {
+        font-size: 8px;
+    }
+
+    .card-image {
+        aspect-ratio: 5/4;
+    }
 }

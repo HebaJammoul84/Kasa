@@ -9,7 +9,7 @@ const Propos = () => {
         <div>
             <Banner bannerImg={propos} title="" />
 
-            <div class="Dropdown-Container">
+            <div className="Dropdown-Container">
                 <Dropdown
                     title="Fiabilité"
                     paragraphe="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."

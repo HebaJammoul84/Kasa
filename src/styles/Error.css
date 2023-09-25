@@ -33,7 +33,18 @@
 }
 
 .to-home {
-    font-size: 100px;
-    position: absolute;
-    
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .error {
+        font-size: 96px;
+        font-weight: 700;
+    }
+
+    .errorMessage {
+        width: 90%;
+        text-align: center;
+    }
 }
