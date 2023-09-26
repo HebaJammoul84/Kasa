@@ -1,6 +1,7 @@
 .Dropdown-Container {
     width: 60%;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {

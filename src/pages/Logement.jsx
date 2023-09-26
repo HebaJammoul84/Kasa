@@ -21,10 +21,10 @@ const Logement = () => {
         setLoading(false)
     });
 
-    for (let logement of data) {
-        if (logement.id === locationId) {
-            return logement
-        }}
+    // for (let logement of data) {
+    //  if (logement.ID === locationId) {
+    //      return logement
+    //  }}
 
 
     if (Loading) {
