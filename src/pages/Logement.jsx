@@ -19,9 +19,13 @@ const Logement = () => {
         console.log(data.find(log => log.ID === locationId))
         setLogement(data.find(log => log.ID === locationId))
         setLoading(false)
-    }
+    });
 
-    );
+    for (let logement of data) {
+        if (logement.id === locationId) {
+            return logement
+        }}
+
 
     if (Loading) {
         return <div> Loading...... </div>
@@ -29,8 +33,8 @@ const Logement = () => {
 
     return (
         <div>
-           <Carousel imageArray={logement.pictures} description={logement.description} />
-           
+            <Carousel imageArray={logement.pictures} description={logement.description} />
+
             <Info
                 title={logement.title}
                 location={logement.location}

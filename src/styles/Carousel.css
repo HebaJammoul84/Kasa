@@ -34,13 +34,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .carousel-container {
-        width: 100%;
-        height: 30px;
-        border-radius: 10px;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom: 100px;
+
+    .carousel-container img {
+        height: 290px;
+        max-width: 96%;
+        border-radius: 15px;
+        margin-left: 13px;
+        margin-right: 10px;
     }
 
     .arrow-container svg {
